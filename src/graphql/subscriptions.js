@@ -8,7 +8,6 @@ export const onCreateNote = /* GraphQL */ `
       name
       description
       image
-      completed
       createdAt
       updatedAt
     }
@@ -21,7 +20,6 @@ export const onUpdateNote = /* GraphQL */ `
       name
       description
       image
-      completed
       createdAt
       updatedAt
     }
@@ -34,7 +32,6 @@ export const onDeleteNote = /* GraphQL */ `
       name
       description
       image
-      completed
       createdAt
       updatedAt
     }

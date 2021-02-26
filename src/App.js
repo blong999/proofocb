@@ -25,7 +25,6 @@ function App() {
       }
       return note;
     }))
-
     setNotes(apiData.data.listNotes.items);
   }
 
@@ -70,21 +69,21 @@ function App() {
       <input
         type="file"
         onChange={onChange}
-        />
+      />
       <button onClick={createNote}>Create Note</button>
       <div style={{marginBottom: 30}}>
         {
-          notes.map(note => (
-            <div key={note.id || note.name}>
-              <h2>{note.name}</h2>
-              <p>{note.description}</p>
-              <button onClick={() => deleteNote(note)}>Delete note</button>
-              {
-                note.image  && <img src={note.image} style={{width: 400}} />
-              }
-            </div>
-          ))
-        }
+      notes.map(note => (
+        <div key={note.id || note.name}>
+          <h2>{note.name}</h2>
+          <p>{note.description}</p>
+          <button onClick={() => deleteNote(note)}>Delete note</button>
+          {
+            note.image && <img src={note.image} style={{width: 400}} />
+          }
+      </div>
+      ))
+    }
       </div>
       <AmplifySignOut />
     </div>
